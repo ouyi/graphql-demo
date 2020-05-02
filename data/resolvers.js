@@ -1,9 +1,12 @@
-import { Friend } from './connectors';
+import { Friend, Alien } from './connectors';
 
 export const resolvers = {
     Query: {
         getFriend: ({ id }) => {
             return new Friend(id, friendDB[id]);
+        },
+        getAliens: () => {
+            return Alien.findAll();
         }
     },
     Mutation: {

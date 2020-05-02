@@ -24,8 +24,15 @@ const typeDefs = `
         OTHER
     }
 
+    type Alien {
+        id: ID
+        name: String
+        planet: String
+    }
+
     type Query {
         getFriend(id: ID): Friend
+        getAliens: [Alien]
     }
 
     input FriendInput {
