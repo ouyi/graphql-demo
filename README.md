@@ -1,5 +1,5 @@
 
-# A GraphQL demo project with MongoDB and SQLite
+# A GraphQL demo project
 
 A GraphQL demo project created from the LinkedIn Learning course [GraphQL Essential Training](https://www.linkedin.com/learning/graphql-essential-training/).
 
