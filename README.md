@@ -26,7 +26,7 @@ Install dependencies:
 
 Start the application:
 
-    DEBUG=express:* npm start
+    npm start
 
 GraphiQL playground:
 

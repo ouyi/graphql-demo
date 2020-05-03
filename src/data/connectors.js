@@ -4,7 +4,12 @@ import _ from "lodash";
 import casual from "casual";
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/friends', {
+
+const mongodbHost = process.env.MONGODB_HOST || 'localhost'
+
+console.log(mongodbHost);
+
+mongoose.connect(`mongodb://${mongodbHost}/friends`, {
     //useNewUrlParser: true,
     //useMongoClient: true,
     user: "mongo_user",

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js",
+    "dev": "DEBUG=express:* nodemon ./src/index.js --exec babel-node -e js",
+    "prestart": "babel ./src --out-dir dist",
+    "start": "NODE_ENV=production node ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yogi",

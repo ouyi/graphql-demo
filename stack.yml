@@ -12,15 +12,15 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 1234
       MONGO_INITDB_DATABASE: friends
     volumes:
-      - ./mongo_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
+    - ./docker/mongo_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
 
   mongo-express:
     image: mongo-express:0.54
     restart: always
     depends_on:
-      - mongo
+    - mongo
     ports:
-      - 8081:8081
+    - 8081:8081
     environment:
       ME_CONFIG_MONGODB_SERVER: mongo
       ME_CONFIG_MONGODB_PORT: 27017
@@ -28,3 +28,16 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: 1234
       ME_CONFIG_BASICAUTH_USERNAME: web
       ME_CONFIG_BASICAUTH_PASSWORD: 123
+
+  node:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+    - 8080:8080
+    depends_on:
+    - mongo
+    environment:
+      MONGODB_HOST: mongo
+    volumes:
+    - ./src:/usr/src/app/src
