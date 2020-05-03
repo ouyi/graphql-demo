@@ -30,11 +30,11 @@ Start the application:
 
 GraphiQL playground:
 
-    [http://localhost:8080/graphql](http://localhost:8080/graphql)
+    http://localhost:8080/graphql
 
 Mongo Express Web UI (user/pass in the stack.yml file):
 
-    [http://localhost:8081/](http://localhost:8081/)
+    http://localhost:8081/
 
 Tear down everything:
 
