@@ -1,7 +1,7 @@
 
-# Test project with GraphQL and MongoDB
+# A GraphQL demo project with MongoDB and SQLite
 
-A test project created from the LinkedIn Learning course [GraphQL Essential Training](https://www.linkedin.com/learning/graphql-essential-training/).
+A GraphQL demo project created from the LinkedIn Learning course [GraphQL Essential Training](https://www.linkedin.com/learning/graphql-essential-training/).
 
 ## Architecture
 
@@ -19,6 +19,10 @@ The project consists of the following four layers, with each layer depends on th
 Start MongoDB instance and the Admin Web UI (Mongo Express):
 
     docker-compose -f stack.yml up
+
+Install dependencies:
+
+    npm install
 
 Start the application:
 
