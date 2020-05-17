@@ -7,7 +7,7 @@ A GraphQL demo project created from the LinkedIn Learning course [GraphQL Essent
 
 The project implements a GraphQL API for CRUD operations on data in two storage backends: friends in MongoDB and aliens in SQLite.
 
-The project consists of the following four layers, with each layer depends on the layer below it:
+The project consists of the following four layers, with each layer depending on the layer below it:
 
 - index.js: the Web layer, based on Express
 - schema.js: the interface, defining data types and operations
